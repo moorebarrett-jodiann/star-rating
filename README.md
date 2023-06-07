@@ -12,4 +12,4 @@ Technologies used include:
 - [React State Hook](https://legacy.reactjs.org/docs/hooks-state.html)
 - [React Icons](https://react-icons.github.io/react-icons/icons?name=fa)
 
-![RatingSystem](../src/images/screenshots/index.png?raw=true "RatingSystem")
+![RatingSystem](../src/images/screenshots/home.png?raw=true "RatingSystem")
