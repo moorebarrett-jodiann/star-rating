@@ -18,10 +18,7 @@
     --app-yellow:#FFE900;
     --app-yellow-hover:#e4d104;
     --app-blue:#3c57ff;
-    --app-blue-hover:#364ee6;
-    --app-blue-bg-color: #146ebe;
-    --app-btn-height: 36px;
-    --app-btn-width: 56px;
+    --app-blue-hover:#2039db;
     --app-light-text-color: #f4f6f8;
     --app-dark-text-color: #1c1c1c;
 }
@@ -35,21 +32,23 @@ body {
     justify-content: space-between;
 }
 
-.stars {
-    margin: 20px 0px;
-}
-
-.stars svg {
-    font-size: 4rem;
-}
-
-.stars svg.fill-star {
-    color: var(--app-yellow);
-}
-
 .container {
     width: min(100% - 30px, 1200px);
     margin-inline: auto;
+}
+
+.grid-container {
+    display: grid;
+    place-items: center;
+}
+
+section {
+    display: grid;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 h2 {
@@ -58,17 +57,119 @@ h2 {
     margin: 20px 0px;
 }
 
-section {
-    padding: 20px 0px 20px 0px;
-    display: grid;
-    place-items: center;
-    height: 100vh;
+button {
+    padding: 10px 15px;
+    text-align: center;
+    background-color: var(--app-blue);
+    border: 1px solid var(--app-blue);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    transition: background-color 0.25s ease-in-out;
+    color: var(--app-white);
+    cursor: pointer;
+}
+
+/**************************************************/
+/*****          STAR RATINGS                 ******/
+/**************************************************/
+
+.stars {
+    margin: 20px 0px;
+}
+
+.stars svg {
+    font-size: 4rem;
+}
+
+.stars svg:hover {
+    cursor: pointer;
+}
+
+.stars svg.fill-star {
+    color: var(--app-yellow);
+}
+
+.rating-section {
+    z-index: 1;
+    text-align: center;
 }
 
 .rating-container {
-    text-align: center;
     width: 300px;
     padding: 25px 15px;
-    border-radius: 5px;
 }
 
+/**************************************************/
+/*****          DIALOG                       ******/
+/**************************************************/
+
+.dialog-section.open {
+    z-index: 2;
+}
+
+dialog:not(.open) {
+    display: none;
+    visibility: hidden;
+}
+
+dialog.open {
+    display: block;
+    visibility: visible;
+    width: 300px;
+    background-color: var(--app-white);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+    border-radius: 10px;
+    padding: 20px;
+    animation: appearDown 0.25s ease-out;
+    text-align: center;
+    margin: auto;
+}
+
+dialog.open::backdrop {
+    background-color: rgba(12, 90, 168, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+dialog.open h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--app-dark-text-color);
+    margin-bottom: 20px;
+}
+
+.dialog-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 3;
+}
+
+.dialog-btn:hover {
+    background-color: var(--app-blue-hover);
+    cursor: pointer;
+}
+
+span.close-dialog {
+    color: var(--app-purple);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/**************************************************/
+/*****       Animations                      ******/
+/**************************************************/
+
+@keyframes appearDown {
+    from {
+        opacity: 0;
+        transform: translate(0px, -10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
