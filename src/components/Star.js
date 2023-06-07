@@ -4,7 +4,7 @@ function Star(props) {
   return (
     <FaStar 
         onClick={props.onClick}
-        class={(props.selected) ? "fill-star" : ""}
+        className={(props.selected) ? "fill-star" : ""}
     />
   )
 }

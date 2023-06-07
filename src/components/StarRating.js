@@ -18,7 +18,7 @@ function StarRating() {
 
     // dynamically generate an array with 5 Star components (index 0-4)
     // ratings will be set within the range of 1-5 using index + 1
-    const stars = Array(5).fill().map((_, index) => 
+    const stars = Array(5).fill().map((arr, index) => 
         <Star 
             key={index} 
             selected={index < rating} // set color fill class on currently clicked star and previous stars
