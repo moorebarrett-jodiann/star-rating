@@ -113,7 +113,7 @@ button:hover {
 /**************************************************/
 
 .dialog-section.open {
-    z-index: 2;
+    z-index: 3;
 }
 
 dialog:not(.open) {
@@ -150,7 +150,7 @@ dialog.open h2 {
     position: fixed;
     bottom: 40px;
     right: 40px;
-    z-index: 3;
+    z-index: 2;
 }
 
 span.close-dialog {
