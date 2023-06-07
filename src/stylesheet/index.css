@@ -1,0 +1,74 @@
+@charset "UTF-8";
+@import "./reset.css";
+
+:root {
+    --app-dark-bg:#1a1d28;
+    --app-medium-bg:#282b38;
+    --app-blue-bg:#24346d;
+    --app-light-bg:#e0e0e0;
+    --app-white:rgb(244, 246, 248);
+    --app-red:#ff3c57;
+    --app-red-hover:#e31e38;
+    --app-green:#33ab4e;
+    --app-green-hover:#217c36;
+    --app-purple:#833cff;
+    --app-purple-hover:#6e1dfa;
+    --app-orange:#ff833c;
+    --app-orange-hover:#fe7a2d;
+    --app-yellow:#FFE900;
+    --app-yellow-hover:#e4d104;
+    --app-blue:#3c57ff;
+    --app-blue-hover:#364ee6;
+    --app-blue-bg-color: #146ebe;
+    --app-btn-height: 36px;
+    --app-btn-width: 56px;
+    --app-light-text-color: #f4f6f8;
+    --app-dark-text-color: #1c1c1c;
+}
+
+body { 
+    background-color: #1a1c24; 
+}
+
+.flexbox {
+    display:flex;
+    justify-content: space-between;
+}
+
+.stars {
+    margin: 20px 0px;
+}
+
+.stars svg {
+    font-size: 4rem;
+}
+
+.stars svg.fill-star {
+    color: var(--app-yellow);
+}
+
+.container {
+    width: min(100% - 30px, 1200px);
+    margin-inline: auto;
+}
+
+h2 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 20px 0px;
+}
+
+section {
+    padding: 20px 0px 20px 0px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.rating-container {
+    text-align: center;
+    width: 300px;
+    padding: 25px 15px;
+    border-radius: 5px;
+}
+
