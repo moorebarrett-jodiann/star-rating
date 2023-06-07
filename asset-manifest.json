@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/moorebarrett-jodiann/star-rating/static/js/main.caeff79c.js",
+    "main.css": "/moorebarrett-jodiann/star-rating/static/css/main.465cb7a0.css",
+    "main.js": "/moorebarrett-jodiann/star-rating/static/js/main.ce5c881b.js",
     "index.html": "/moorebarrett-jodiann/star-rating/index.html",
-    "main.caeff79c.js.map": "/moorebarrett-jodiann/star-rating/static/js/main.caeff79c.js.map"
+    "main.465cb7a0.css.map": "/moorebarrett-jodiann/star-rating/static/css/main.465cb7a0.css.map",
+    "main.ce5c881b.js.map": "/moorebarrett-jodiann/star-rating/static/js/main.ce5c881b.js.map"
   },
   "entrypoints": [
-    "static/js/main.caeff79c.js"
+    "static/css/main.465cb7a0.css",
+    "static/js/main.ce5c881b.js"
   ]
 }
