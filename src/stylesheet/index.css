@@ -72,6 +72,12 @@ button {
     cursor: pointer;
 }
 
+
+button:hover {
+    background-color: var(--app-blue-hover);
+    cursor: pointer;
+}
+
 /**************************************************/
 /*****          STAR RATINGS                 ******/
 /**************************************************/
@@ -145,11 +151,6 @@ dialog.open h2 {
     bottom: 40px;
     right: 40px;
     z-index: 3;
-}
-
-.dialog-btn:hover {
-    background-color: var(--app-blue-hover);
-    cursor: pointer;
 }
 
 span.close-dialog {
